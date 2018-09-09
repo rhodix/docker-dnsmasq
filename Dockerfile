@@ -7,6 +7,6 @@ RUN apk update \
     && echo "user=root" > /etc/dnsmasq.conf \
     && echo 'conf-dir=/etc/dnsmasq.d/,*.conf' >> /etc/dnsmasq.conf
 
-EXPOSE 10053/tcp 10053/udp
+EXPOSE 53/tcp 53/udp
 
-ENTRYPOINT ["dnsmasq","-k","--port=10053"]
+ENTRYPOINT ["dnsmasq","-k","--port=53"]
